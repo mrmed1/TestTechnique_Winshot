@@ -1,0 +1,157 @@
+<!--<h3>Inscription</h3>
+<form class="example-container" [formGroup]="form" (ngSubmit)="submitForm()" >
+  <div class="form-row">
+    <div class="col">
+    <input type="text" class="form-control" style="margin-left: 27%" placeholder="Nom *" formControlName="nom"  [ngClass]="{'is-invalid':nom && nom.errors && nom.touched}"/>
+    <div *ngIf="nom&&nom.hasError('required')"
+         class="invalid-feedback" style="margin-left: 27%">
+      Nom is required
+    </div>
+    </div>
+    <div class="col">
+
+  <input type="text" class="form-control" style="margin-left: 27%" placeholder="Prenom *" formControlName="prenom" [ngClass]="{'is-invalid':prenom && prenom.errors && prenom.touched}" />
+  <div *ngIf="prenom&&prenom.hasError('required')"
+       class="invalid-feedback" style="margin-left: 27%">
+    Prenom is required
+  </div>
+
+</div>
+  </div>
+
+    <div class="form-row">
+      <div class="col">
+  <input type="text" class="form-control" style="margin-left: 27%" placeholder="Email *" formControlName="email"  [ngClass]="{'is-invalid':email && email.errors && email.touched}"/>
+  <div *ngIf="email&&email.hasError('required')"
+       class="invalid-feedback" style="margin-left: 27%">
+    Email is required
+  </div>
+
+</div>
+      <div class="col">
+    <input type="password" class="form-control" placeholder="Password *" style="margin-left: 27%" formControlName="password" [ngClass]="{'is-invalid':password&&password.errors && password.touched}" />
+    <div *ngIf="password&&password.hasError('required')"
+         class="invalid-feedback" style="margin-left: 27%">
+      Password is required
+    </div>
+  </div>
+    </div>
+  <input type="submit" class="btnRegister"  value="Sign In"/>
+</form>-->
+
+<body style="position: fixed" class="ss">
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register" >
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+      <h3>Welcome</h3>
+      <p>Your Journey Starts Here
+        Explore and Travel
+        Your Best Trip</p>
+      <input type="submit" name="" value="Login" (click)="tologin()"/><br/>
+    </div>
+    <div class="col-md-9 register-right">
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h1 class="register-heading" style="font-weight: bold">Register</h1>
+          <form (ngSubmit)="onSubmit()" [formGroup]="form">
+            <div class="row register-form">
+              <div class="col-md-6">
+
+
+
+                <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input [ngClass]="{'is-invalid':nom&&nom.errors && nom.touched}"
+                         class="form-control"
+                         formControlName="nom"
+                         id="Nom"
+                         placeholder="Nom"
+                         type="text"
+                       >
+                  <div *ngIf="nom&&nom.hasError('required')"
+                       class="invalid-feedback">
+                    Nom est obligatoire
+                  </div>
+
+                </div>
+
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input [ngClass]="{'is-invalid':email && email.errors && email.touched}"
+                         class="form-control"
+                         formControlName="email"
+                         id="email"
+                         placeholder="Email"
+                         type="text"
+                         >
+                  <div *ngIf="email&&email.hasError('EmailTaken')"
+                       class="invalid-feedback">
+                    Email is taken please enter a valid email address.
+                  </div>
+                  <div *ngIf="email&&email.hasError('required')"
+                       class="invalid-feedback">
+                    Email is required
+                  </div>
+                  <div *ngIf="email&&email.hasError('email')"
+                       class="invalid-feedback">
+                    Please enter a valid email address
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-6">
+
+                <div class="form-group">
+                  <label for="prenom">Prenom</label>
+                  <input [ngClass]="{'is-invalid':prenom&&prenom.errors && prenom.touched}"
+                         class="form-control"
+                         formControlName="prenom"
+                         id="prenom"
+                         placeholder="prenom"
+                         type="text"
+                         >
+                  <div *ngIf="prenom&&prenom.hasError('required')"
+                       class="invalid-feedback">
+                    Prenom est obligatoire
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label for="motdepasse">Mot de Passe</label>
+                  <input [ngClass]="{'is-invalid':motdepasse&&motdepasse.errors && motdepasse.touched}"
+                         class="form-control"
+                         formControlName="motdepasse"
+                         id="motdepasse"
+                         placeholder="Mot de passe"
+                         type="password"
+                         >
+
+                  <div *ngIf="motdepasse&&motdepasse.hasError('required')"
+                       class="invalid-feedback">
+                    Mot de passe est obligatoire
+                  </div>
+
+                </div>
+
+
+                <input type="submit" class="btnRegister"  value="Register"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+

@@ -1,0 +1,75 @@
+<!--
+<h3> Login </h3>
+
+<form class="example-container" [formGroup]="form" (ngSubmit)="submitForm()" >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email"  [ngClass]="{'is-invalid':email && email.errors && email.touched}">
+    <div *ngIf="email&&email.hasError('required')"
+         class="invalid-feedback" style="margin-left: 27%">
+      Email is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password" [ngClass]="{'is-invalid':password&&password.errors && password.touched}">
+    <div *ngIf="password&&password.hasError('required')"
+         class="invalid-feedback" style="margin-left: 27%">
+      Password is required
+    </div>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+-->
+<body class="ss">
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+      <h3>Welcome</h3>
+      <p>Your Journey Starts Here
+        Explore and Travel
+        Your Best Trip</p>
+      <input type="submit" name="" value="Register" (click)="toregister()"/><br/>
+    </div>
+    <div class="col-md-9 register-right">
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h1 class="register-heading" style="font-weight: bold">Login</h1>
+          <div class="row register-form">
+            <div class="col-md-8" >
+              <form class="example-container" [formGroup]="form" (ngSubmit)="submitForm()" >
+                <div class="form-group" >
+                  <input type="text" class="form-control" style="margin-left: 27%" placeholder="Email *" formControlName="email"  [ngClass]="{'is-invalid':email && email.errors && email.touched}"/>
+                  <div *ngIf="email&&email.hasError('required')"
+                       class="invalid-feedback" style="margin-left: 27%">
+                    Email is required
+                  </div>
+
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password *" style="margin-left: 27%" formControlName="password" [ngClass]="{'is-invalid':password&&password.errors && password.touched}" />
+                  <div *ngIf="password&&password.hasError('required')"
+                       class="invalid-feedback" style="margin-left: 27%">
+                    Password is required
+                  </div>
+                </div>
+
+                <input type="submit" class="btnRegister"  value="Sign In"/>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
